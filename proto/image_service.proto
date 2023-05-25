@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ImageService {
+  rpc ProcessImage(ImageRequest) returns (ImageResponse) {}
+}
+
+message ImageRequest {
+  string image_path = 1;
+}
+
+message ImageResponse {
+  map<string, string> result_dict = 1;
+}
